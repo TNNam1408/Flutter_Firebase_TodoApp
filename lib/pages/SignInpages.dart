@@ -8,7 +8,7 @@ import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'HomePages.dart';
 
 class SignInPage extends StatefulWidget {
-  const SignInPage({Key? key}) : super(key: key);
+  const SignInPage({Key key}) : super(key: key);
 
   @override
   _SignInPageState createState() => _SignInPageState();
@@ -127,7 +127,7 @@ class _SignInPageState extends State<SignInPage> {
             email: _emailController.text,
             password: _passwordController.text,
           );
-          print(userCredential.user!.email);
+          print(userCredential.user.email);
           setState(() {
             circular = false;
           });
